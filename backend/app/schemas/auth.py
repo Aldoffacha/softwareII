@@ -28,6 +28,7 @@ class UserResponse(BaseModel):
     apellido: str
     email: EmailStr
     rol_id: int
+    rol_nombre: str
     activo: bool
     creado_en: datetime
 

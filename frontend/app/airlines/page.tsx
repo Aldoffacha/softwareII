@@ -2,9 +2,11 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import { apiGet, apiSend } from "@/lib/api";
+import { useRequireAuth } from "@/components/RequireAuth";
 import { Airline } from "@/types";
 
 export default function AirlinesPage() {
+  useRequireAuth();
   const [airlines, setAirlines] = useState<Airline[]>([]);
   const [error, setError] = useState("");
   const [form, setForm] = useState({ codigo_iata: "", nombre: "", nombre_corto: "", pais_origen: "Bolivia" });

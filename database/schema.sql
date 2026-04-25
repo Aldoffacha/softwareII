@@ -93,6 +93,12 @@ CREATE TABLE usuarios (
 CREATE INDEX idx_usuarios_email  ON usuarios(email);
 CREATE INDEX idx_usuarios_rol_id ON usuarios(rol_id);
 
+INSERT INTO usuarios (nombre, apellido, email, password_hash, rol_id, activo)
+VALUES
+('Admin', 'Aasano', 'admin@aasana.gob.bo', '$2b$12$FPjfiPmgJ5Cnf3QBpsdGeup8rTHmGOQqXX/vXIUOcfzN9eiICBCKm', 1, TRUE),
+('Operador', 'Aasano', 'operador@aasana.gob.bo', '$2b$12$xdjd26zMX7ZJ002d6DQEF.Ys7gdZdvQX2e2XHWlMioywhdDuAu2km', 2, TRUE),
+('Publico', 'Aasano', 'publico@aasana.gob.bo', '$2b$12$W55y9uBrp5FCD.d02oNOsOQrju0ka1OBGrRALzmqvfvRfYUXYbKLO', 3, TRUE);
+
 COMMENT ON TABLE  usuarios              IS 'Usuarios del sistema con sus roles';
 COMMENT ON COLUMN usuarios.password_hash IS 'Hash bcrypt de la contraseña';
 

@@ -13,6 +13,6 @@ router = APIRouter()
 @router.get("", response_model=DashboardResponse)
 def summary(
     db: Session = Depends(get_db),
-    _=Depends(require_roles("ADMINISTRADOR")),
+    _=Depends(require_roles("ADMINISTRADOR", "OPERADOR", "PUBLICO")),
 ):
     return DashboardResponse.model_validate(DashboardService.summary(db))

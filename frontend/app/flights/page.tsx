@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { apiGet, apiSend } from "@/lib/api";
+import { useRequireAuth } from "@/components/RequireAuth";
 import { Flight } from "@/types";
 
 const STATES = ["PROGRAMADO", "ABORDANDO", "DESPEGO", "RETRASADO", "CANCELADO", "ATERRIZO"];
@@ -17,6 +18,7 @@ const STATE_BADGE: Record<string, string> = {
 };
 
 export default function FlightsPage() {
+  useRequireAuth();
   const [flights, setFlights] = useState<Flight[]>([]);
   const [error,   setError]   = useState("");
 

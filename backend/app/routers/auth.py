@@ -24,4 +24,16 @@ def register(data: RegisterRequest, db: Session = Depends(get_db)) -> UserRespon
 
 @router.get("/me", response_model=UserResponse)
 def me(current: AuthenticatedUser = Depends(get_current_user)) -> UserResponse:
-    return UserResponse.model_validate(current.user)
+    user = current.user
+    return UserResponse.model_validate(
+        {
+            "id": user.id,
+            "nombre": user.nombre,
+            "apellido": user.apellido,
+            "email": user.email,
+            "rol_id": user.rol_id,
+            "activo": user.activo,
+            "creado_en": user.creado_en,
+            "rol_nombre": current.role_name,
+        }
+    )

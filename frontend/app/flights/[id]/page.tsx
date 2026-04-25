@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { apiGet } from "@/lib/api";
+import { useRequireAuth } from "@/components/RequireAuth";
 
 export default function FlightDetailPage({ params }: { params: { id: string } }) {
+  useRequireAuth();
   const [flight, setFlight] = useState<any>(null);
   const [notifications, setNotifications] = useState<any[]>([]);
   const [error, setError] = useState("");

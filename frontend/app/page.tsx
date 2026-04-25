@@ -7,7 +7,7 @@ import { LoginResponse } from "@/types";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("admin@aasana.gob.bo");
-  const [password, setPassword] = useState("Password123!");
+  const [password, setPassword] = useState("Admin123!");
   const [error, setError] = useState("");
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -26,6 +26,12 @@ export default function LoginPage() {
     <section className="panel" style={{ maxWidth: 560, margin: "2rem auto" }}>
       <h1>Ingreso al Sistema AASANA</h1>
       <p>Administra vuelos, estados y reportes en tiempo real.</p>
+      <div style={{ marginBottom: 16, padding: 14, borderRadius: 18, background: "rgba(255,255,255,0.04)", color: "var(--text-muted)" }}>
+        <p style={{ margin: 0, fontWeight: 600 }}>Usuarios de prueba:</p>
+        <p style={{ margin: 4 }}>admin@aasana.gob.bo / Admin123!</p>
+        <p style={{ margin: 4 }}>operador@aasana.gob.bo / Operador123!</p>
+        <p style={{ margin: 4 }}>publico@aasana.gob.bo / Publico123!</p>
+      </div>
       <form onSubmit={onSubmit} className="grid">
         <div>
           <label>Email</label>

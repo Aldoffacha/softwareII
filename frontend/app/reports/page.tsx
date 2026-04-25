@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { apiGet } from "@/lib/api";
+import { useRequireAuth } from "@/components/RequireAuth";
 
 export default function ReportsPage() {
+  useRequireAuth();
   const [punctuality, setPunctuality] = useState<any[]>([]);
   const [byDay, setByDay] = useState<any[]>([]);
   const [delays, setDelays] = useState<any>(null);

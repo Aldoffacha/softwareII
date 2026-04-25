@@ -2,9 +2,11 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import { apiGet, apiSend } from "@/lib/api";
+import { useRequireAuth } from "@/components/RequireAuth";
 import { Airport } from "@/types";
 
 export default function AirportsPage() {
+  useRequireAuth();
   const [airports, setAirports] = useState<Airport[]>([]);
   const [error, setError] = useState("");
   const [form, setForm] = useState({

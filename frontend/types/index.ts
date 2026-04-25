@@ -36,3 +36,14 @@ export type Flight = {
   terminal?: string;
   minutos_retraso: number;
 };
+
+export type UserProfile = {
+  id: string;
+  nombre: string;
+  apellido: string;
+  email: string;
+  rol_id: number;
+  rol_nombre: string;
+  activo: boolean;
+  creado_en: string;
+};
