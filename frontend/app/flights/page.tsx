@@ -69,6 +69,7 @@ export default function FlightsPage() {
               <td>{f.fecha_vuelo}</td>
               <td>
                 <select
+                  title="Cambiar estado"
                   value={f.estado}
                   onChange={(e) => changeState(f.id, e.target.value)}
                   style={{ width: "auto", fontSize: ".78rem", padding: "3px 28px 3px 8px" }}

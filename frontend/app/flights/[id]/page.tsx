@@ -15,7 +15,7 @@ export default function FlightDetailPage({ params }: { params: { id: string } })
       .then(setFlight)
       .catch((err) => setError(err instanceof Error ? err.message : "No fue posible cargar vuelo"));
 
-    apiGet(`/api/notifications/flight/${params.id}`)
+    apiGet<any[]>(`/api/notifications/flight/${params.id}`)
       .then(setNotifications)
       .catch(() => setNotifications([]));
   }, [params.id]);

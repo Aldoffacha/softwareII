@@ -23,7 +23,7 @@
   --r:          6px;
   --r-lg:       10px;
   --nav-h:      56px;
-=======
+
   --bg: #090b14;
   --bg-2: #111624;
   --bg-3: #151d33;
@@ -47,11 +47,11 @@
 
 html { font-size: 16px; }
 body {
-<<<<<<< HEAD
+ 
   font-family: var(--font-ui);
   background: var(--navy);
   color: var(--text);
-=======
+
   margin: 0;
   font-family: "Inter", "Segoe UI", sans-serif;
   color: var(--text);
@@ -65,13 +65,13 @@ body {
 
 /* ── Fondo ── */
 .bg-grid {
-<<<<<<< HEAD
+ 
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background-image:
     linear-gradient(rgba(59,130,246,.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(59,130,246,.04) 1px, transparent 1px);
   background-size: 40px 40px;
-=======
+
   position: fixed;
   inset: 0;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
@@ -79,18 +79,17 @@ body {
   background-size: 32px 32px;
   pointer-events: none;
   z-index: -1;
->>>>>>> 9578619 (Avance: mejoras en backend y frontend)
 }
 
 /* ── Shell ── */
 .app-shell {
-<<<<<<< HEAD
+ 
   position: relative; z-index: 1;
   min-height: calc(100vh - var(--nav-h));
   padding: 2rem 1.5rem;
   max-width: 1280px;
   margin: 0 auto;
-=======
+
   width: min(1140px, 94vw);
   margin: 1.4rem auto 3rem;
   animation: rise 0.35s ease-out;
@@ -111,6 +110,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 20;
+  -webkit-backdrop-filter: blur(22px);
   backdrop-filter: blur(22px);
   background: rgba(12, 17, 33, 0.84);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -170,7 +170,6 @@ h3 {
 .grid {
   display: grid;
   gap: 1rem;
->>>>>>> 9578619 (Avance: mejoras en backend y frontend)
 }
 
 /* ── Grids ── */
@@ -227,19 +226,20 @@ p { color: var(--text-dim); font-size: .875rem; line-height: 1.6; margin-bottom:
 /* ── Formularios ── */
 label {
   display: block;
-<<<<<<< HEAD
+ 
   font-size: .7rem;
   font-weight: 500;
   letter-spacing: .07em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 5px;
-=======
+
   font-size: 0.95rem;
   margin-bottom: 0.35rem;
   font-weight: 600;
   color: var(--text-muted);
->>>>>>> 9578619 (Avance: mejoras en backend y frontend)
+  margin-bottom: 0.35rem;
+  font-weight: 600;
 }
 input[type="text"],
 input[type="email"],
@@ -247,7 +247,7 @@ input[type="password"],
 input:not([type]),
 select {
   width: 100%;
-<<<<<<< HEAD
+ 
   padding: .55rem .8rem;
   background: var(--navy-lt);
   border: 1px solid var(--border);
@@ -258,14 +258,13 @@ select {
   outline: none;
   transition: border-color .15s, box-shadow .15s;
   appearance: none;
-=======
+
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
   padding: 0.75rem 0.95rem;
   font: inherit;
   background: rgba(255, 255, 255, 0.03);
   color: var(--text);
->>>>>>> 9578619 (Avance: mejoras en backend y frontend)
 }
 input:focus, select:focus {
   border-color: var(--accent);
@@ -273,7 +272,7 @@ input:focus, select:focus {
 }
 select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; padding-right: 2rem; cursor: pointer; }
 
-<<<<<<< HEAD
+ 
 button[type="submit"], .btn {
   padding: .55rem 1.25rem;
   background: var(--accent);
@@ -281,29 +280,20 @@ button[type="submit"], .btn {
   font-family: var(--font-ui);
   font-size: .875rem;
   font-weight: 600;
-=======
-button {
-  background: linear-gradient(135deg, var(--accent), #7c3aed);
-  color: white;
->>>>>>> 9578619 (Avance: mejoras en backend y frontend)
   border: none;
   border-radius: var(--r);
   cursor: pointer;
-<<<<<<< HEAD
   transition: background .15s, transform .1s;
-=======
-  transition: transform 0.2s ease, filter 0.2s ease;
 }
+
 button:hover {
   transform: translateY(-1px);
   filter: brightness(1.05);
->>>>>>> 9578619 (Avance: mejoras en backend y frontend)
 }
 button[type="submit"]:hover, .btn:hover  { background: var(--accent-dk); }
 button[type="submit"]:active,.btn:active { transform: scale(.98); }
 
 button.secondary {
-<<<<<<< HEAD
   padding: .3rem .75rem;
   background: transparent;
   border: 1px solid rgba(239,68,68,.35);
@@ -314,10 +304,6 @@ button.secondary {
   font-family: var(--font-ui);
   cursor: pointer;
   transition: background .15s, border-color .15s;
-=======
-  background: transparent;
-  color: var(--text);
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 table {
@@ -335,13 +321,12 @@ td {
 
 .kpi {
   border-left: 4px solid var(--accent);
->>>>>>> 9578619 (Avance: mejoras en backend y frontend)
 }
 button.secondary:hover { background: rgba(239,68,68,.1); border-color: rgba(239,68,68,.6); }
 
-<<<<<<< HEAD
+ 
 /* ── Mensajes ── */
-=======
+
 .dashboard-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -406,7 +391,6 @@ button.secondary:hover { background: rgba(239,68,68,.1); border-color: rgba(239,
   text-decoration: underline;
 }
 
->>>>>>> 9578619 (Avance: mejoras en backend y frontend)
 .error {
   margin-top: .75rem;
   padding: .55rem .85rem;

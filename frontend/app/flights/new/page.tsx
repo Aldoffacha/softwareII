@@ -50,11 +50,11 @@ export default function NewFlightPage() {
       <form onSubmit={submit} className="grid grid-2">
         <div>
           <label>Codigo de Vuelo</label>
-          <input value={form.codigo_vuelo} onChange={(e) => setForm({ ...form, codigo_vuelo: e.target.value })} />
+          <input title="Codigo de Vuelo" value={form.codigo_vuelo} onChange={(e) => setForm({ ...form, codigo_vuelo: e.target.value })} />
         </div>
         <div>
           <label>Aerolinea</label>
-          <select value={form.aerolinea_id} onChange={(e) => setForm({ ...form, aerolinea_id: e.target.value })}>
+          <select title="Aerolinea" value={form.aerolinea_id} onChange={(e) => setForm({ ...form, aerolinea_id: e.target.value })}>
             {airlines.map((a) => (
               <option key={a.id} value={a.id}>
                 {a.nombre}
@@ -64,10 +64,7 @@ export default function NewFlightPage() {
         </div>
         <div>
           <label>Origen</label>
-          <select
-            value={form.aeropuerto_origen_id}
-            onChange={(e) => setForm({ ...form, aeropuerto_origen_id: e.target.value })}
-          >
+          <select title="Aeropuerto de Origen" value={form.aeropuerto_origen_id} onChange={(e) => setForm({ ...form, aeropuerto_origen_id: e.target.value })}>
             {airports.map((a) => (
               <option key={a.id} value={a.id}>
                 {a.codigo_iata} - {a.ciudad}
@@ -77,10 +74,7 @@ export default function NewFlightPage() {
         </div>
         <div>
           <label>Destino</label>
-          <select
-            value={form.aeropuerto_destino_id}
-            onChange={(e) => setForm({ ...form, aeropuerto_destino_id: e.target.value })}
-          >
+          <select title="Aeropuerto de Destino" value={form.aeropuerto_destino_id} onChange={(e) => setForm({ ...form, aeropuerto_destino_id: e.target.value })}>
             {airports.map((a) => (
               <option key={a.id} value={a.id}>
                 {a.codigo_iata} - {a.ciudad}
@@ -90,31 +84,23 @@ export default function NewFlightPage() {
         </div>
         <div>
           <label>Fecha</label>
-          <input type="date" value={form.fecha_vuelo} onChange={(e) => setForm({ ...form, fecha_vuelo: e.target.value })} />
+          <input title="Fecha del vuelo" type="date" value={form.fecha_vuelo} onChange={(e) => setForm({ ...form, fecha_vuelo: e.target.value })} />
         </div>
         <div>
           <label>Hora Salida Programada</label>
-          <input
-            type="time"
-            value={form.hora_salida_programada}
-            onChange={(e) => setForm({ ...form, hora_salida_programada: e.target.value })}
-          />
+          <input title="Hora de salida" type="time" value={form.hora_salida_programada} onChange={(e) => setForm({ ...form, hora_salida_programada: e.target.value })} />
         </div>
         <div>
           <label>Hora Llegada Programada</label>
-          <input
-            type="time"
-            value={form.hora_llegada_programada}
-            onChange={(e) => setForm({ ...form, hora_llegada_programada: e.target.value })}
-          />
+          <input title="Hora de llegada" type="time" value={form.hora_llegada_programada} onChange={(e) => setForm({ ...form, hora_llegada_programada: e.target.value })} />
         </div>
         <div>
           <label>Gate</label>
-          <input value={form.gate} onChange={(e) => setForm({ ...form, gate: e.target.value })} />
+          <input title="Gate" value={form.gate} onChange={(e) => setForm({ ...form, gate: e.target.value })} />
         </div>
         <div>
           <label>Terminal</label>
-          <input value={form.terminal} onChange={(e) => setForm({ ...form, terminal: e.target.value })} />
+          <input title="Terminal" value={form.terminal} onChange={(e) => setForm({ ...form, terminal: e.target.value })} />
         </div>
         <div style={{ gridColumn: "1/-1" }}>
           <button type="submit">Guardar Vuelo</button>

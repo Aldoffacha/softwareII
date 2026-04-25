@@ -50,19 +50,19 @@ export default function AirlinesPage() {
         <form onSubmit={createAirline} className="grid">
           <div>
             <label>Codigo IATA</label>
-            <input value={form.codigo_iata} onChange={(e) => setForm({ ...form, codigo_iata: e.target.value })} />
+            <input title="Codigo IATA" value={form.codigo_iata} onChange={(e) => setForm({ ...form, codigo_iata: e.target.value })} />
           </div>
           <div>
             <label>Nombre</label>
-            <input value={form.nombre} onChange={(e) => setForm({ ...form, nombre: e.target.value })} />
+            <input title="Nombre" value={form.nombre} onChange={(e) => setForm({ ...form, nombre: e.target.value })} />
           </div>
           <div>
             <label>Nombre Corto</label>
-            <input value={form.nombre_corto} onChange={(e) => setForm({ ...form, nombre_corto: e.target.value })} />
+            <input title="Nombre Corto" value={form.nombre_corto} onChange={(e) => setForm({ ...form, nombre_corto: e.target.value })} />
           </div>
           <div>
             <label>Pais de Origen</label>
-            <input value={form.pais_origen} onChange={(e) => setForm({ ...form, pais_origen: e.target.value })} />
+            <input title="Pais de Origen" value={form.pais_origen} onChange={(e) => setForm({ ...form, pais_origen: e.target.value })} />
           </div>
           <button type="submit">Crear</button>
         </form>

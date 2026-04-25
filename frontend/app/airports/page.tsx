@@ -56,23 +56,23 @@ export default function AirportsPage() {
         <form onSubmit={createAirport} className="grid">
           <div>
             <label>Codigo IATA</label>
-            <input value={form.codigo_iata} onChange={(e) => setForm({ ...form, codigo_iata: e.target.value })} />
+            <input title="Codigo IATA" value={form.codigo_iata} onChange={(e) => setForm({ ...form, codigo_iata: e.target.value })} />
           </div>
           <div>
             <label>Codigo ICAO</label>
-            <input value={form.codigo_icao} onChange={(e) => setForm({ ...form, codigo_icao: e.target.value })} />
+            <input title="Codigo ICAO" value={form.codigo_icao} onChange={(e) => setForm({ ...form, codigo_icao: e.target.value })} />
           </div>
           <div>
             <label>Nombre</label>
-            <input value={form.nombre} onChange={(e) => setForm({ ...form, nombre: e.target.value })} />
+            <input title="Nombre" value={form.nombre} onChange={(e) => setForm({ ...form, nombre: e.target.value })} />
           </div>
           <div>
             <label>Ciudad</label>
-            <input value={form.ciudad} onChange={(e) => setForm({ ...form, ciudad: e.target.value })} />
+            <input title="Ciudad" value={form.ciudad} onChange={(e) => setForm({ ...form, ciudad: e.target.value })} />
           </div>
           <div>
             <label>Departamento</label>
-            <input value={form.departamento} onChange={(e) => setForm({ ...form, departamento: e.target.value })} />
+            <input title="Departamento" value={form.departamento} onChange={(e) => setForm({ ...form, departamento: e.target.value })} />
           </div>
           <button type="submit">Crear</button>
         </form>
