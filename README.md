@@ -1,6 +1,9 @@
 # AASANA - Gestion de Vuelos
 
 Sistema web completo para la gestion de vuelos en aeropuertos de Bolivia.
+ALDO MICHAEL FIGUEREDO SALVATIERRA 
+SEBASTIAN ARIEL CAMACHO LOAYZA  
+BORIS ERNESTO ARIAS SALVATIERRA 
 
 ## Arquitectura
 
@@ -17,7 +20,7 @@ Sistema web completo para la gestion de vuelos en aeropuertos de Bolivia.
 
 ## Requisitos Previos
 
-- PostgreSQL 14+
+- PostgreSQL 16
 - Python 3.11+
 - Node.js 20+
 
